@@ -56,11 +56,19 @@ cd app/build/outputs/apk/release
 
 
 ssh -i ../webapp_jenkins.pem ubuntu@34.227.94.157 << EOF
+
 rm -rf assessment3
+
 git clone https://github.com/itsyash2122/assessment3.git
+
 cd assessment3
+
 cd webapp
+
 docker system prune --all -f
+
 docker build -t webapp .
+
 docker run -d -p 80:80 webapp:latest
+
 EOF
