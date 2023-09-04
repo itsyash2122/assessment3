@@ -32,14 +32,24 @@ Create a FreeStyle job in jenkins.
 In the execute shell write the following commands
 -------------------------------------------------------------------------
 export ANDROID_HOME=/usr/lib/android-sdk/
+
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin
+
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 rm -rf assessment3
+
 git clone https://github.com/codepath/android_hello_world.git assessment3
+
 cd assessment3
+
 chmod +x gradlew
+
 ./gradlew clean
+
 ./gradlew assembleRelease
+
 cd app/build/outputs/apk/release
+
 -------------------------------------------------------------------------**
 
