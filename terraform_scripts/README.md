@@ -5,13 +5,17 @@ Then,
 Run the following command:
 
 terraform init
+
 terraform validate
+
 terraform plan
+
 terraform apply
 
 
 
 
-TO delete the infrastructure please run the below commad.
+
+TO delete the infrastructure please run the below command.
 
 terraform destroy
