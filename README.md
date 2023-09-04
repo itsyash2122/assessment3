@@ -27,7 +27,7 @@ Run the below commad in the jenkins server to configure the Android-sdk for the 
 17.  yes | sdkmanager "platform-tools" "platforms;android-29"
 
 
-Jenkins Pipeline:
+**Jenkins Pipeline:**
 
 Create a FreeStyle job in jenkins.
 In the execute shell write the following commands
