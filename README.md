@@ -31,7 +31,8 @@ Jenkins Pipeline:
 
 Create a FreeStyle job in jenkins.
 In the execute shell write the following commands
--------------------------------------------------------------------------
+
+
 export ANDROID_HOME=/usr/lib/android-sdk/
 
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin
@@ -52,5 +53,4 @@ chmod +x gradlew
 
 cd app/build/outputs/apk/release
 
--------------------------------------------------------------------------**
 
