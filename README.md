@@ -1,9 +1,6 @@
-android_hello_world
-===================
+**ANDROID APP BUILD**
 
 Hello World Android App
-
-<img src="http://i.imgur.com/dio0DXF.png" width="450" />
 
 
 Run the below commad in the jenkins server to configure the Android-sdk for the androif build
@@ -27,7 +24,7 @@ Run the below commad in the jenkins server to configure the Android-sdk for the 
 17.  yes | sdkmanager "platform-tools" "platforms;android-29"
 
 
-**Jenkins Pipeline:**
+**Jenkins Pipeline for :**
 
 Create a FreeStyle job in jenkins.
 In the execute shell write the following commands
@@ -54,3 +51,16 @@ chmod +x gradlew
 cd app/build/outputs/apk/release
 
 
+**WEBAPP DEPLOYMENT**
+
+
+
+ssh -i ../webapp_jenkins.pem ubuntu@34.227.94.157 << EOF
+rm -rf assessment3
+git clone https://github.com/itsyash2122/assessment3.git
+cd assessment3
+cd webapp
+docker system prune --all -f
+docker build -t webapp .
+docker run -d -p 80:80 webapp:latest
+EOF
